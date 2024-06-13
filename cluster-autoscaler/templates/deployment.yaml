@@ -22,4 +22,24 @@ spec:
             - ./cluster-autoscaler
             - --cloud-provider=aws
             - --nodes=1:10:<YOUR_ASG_NAME>
-            - --
+             - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/{{ .Values.clusterName }}
+            - --cluster-name={{ .Values.clusterName }}
+            - --aws-region={{ .Values.awsRegion }}
+          resources:
+            limits:
+              cpu: 100m
+              memory: 300Mi
+            requests:
+              cpu: 100m
+              memory: 300Mi
+          env:
+            - name: AWS_REGION
+              value: {{ .Values.awsRegion }}
+          volumeMounts:
+            - name: ssl-certs
+              mountPath: /etc/ssl/certs/ca-certificates.crt
+              readOnly: true
+      volumes:
+        - name: ssl-certs
+          hostPath:
+            path: /etc/ssl/certs/ca-certificates.crt
