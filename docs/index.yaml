@@ -1,0 +1,23 @@
+apiVersion: v1
+entries:
+  aws-load-balancer-controller:
+  - apiVersion: v2
+    appVersion: v2.3.1
+    created: "2024-06-13T01:12:21.32658-04:00"
+    description: A Helm chart for AWS Load Balancer Controller
+    digest: 6e7ee77be4bdbc72dcb6e655d6c5ab76dd7fcabcb0ddbf7669f1fc877bb5b84e
+    name: aws-load-balancer-controller
+    urls:
+    - https://chodesuresh.github.io/eks-helm-charts/aws-load-balancer-controller-0.1.0.tgz
+    version: 0.1.0
+  cluster-autoscaler:
+  - apiVersion: v2
+    appVersion: v1.20.0
+    created: "2024-06-13T01:12:21.326775-04:00"
+    description: A Helm chart for Kubernetes Cluster Autoscaler
+    digest: 264c8bd1ea6422f6bccd6a9a90d7cc5d304e7ee106c4a2fe3d333e10ec05a774
+    name: cluster-autoscaler
+    urls:
+    - https://chodesuresh.github.io/eks-helm-charts/cluster-autoscaler-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-06-13T01:12:21.325565-04:00"
