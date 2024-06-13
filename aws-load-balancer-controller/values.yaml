@@ -1,0 +1,5 @@
+clusterName: my-eks-cluster
+region: us-west-2
+vpcId: vpc-03742701d592acf9c
+serviceAccount:
+  create: false
